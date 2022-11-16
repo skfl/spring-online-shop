@@ -1,0 +1,17 @@
+@font-face {
+    font-family: 'SF UI Display';
+    src: url(../fonts/sfuidisplay_bold.ttf) format(truetype);
+    font-style: normal;
+    font-weight: normal;
+}
+
+
+
+.text-block{
+    padding-top: 0.5em;
+    margin-left: 8em;
+    display:block;
+    color: white;
+    font-size: 3em;
+    font-family: 'SF UI Display';
+}

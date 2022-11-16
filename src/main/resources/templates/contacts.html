@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<HTML id="html" xmlns:th="http://www.thymeleaf.org">
+<HEAD>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link th:href="@{/styles/style.css}" rel="stylesheet" type="text/css">
+    <link th:href="@{/styles/contact.css}" rel="stylesheet" type="text/css">
+    <link type="image/x-icon" th:href="@{/icons/favicon.png}" rel="shortcut icon">
+    <link type="Image/x-icon" th:href="@{/icons/favicon.png}" rel="icon">
+    <TITLE>
+        Контакты
+    </TITLE>
+    <script th:src="@{/scripts/jq.js}"></script>
+
+</HEAD>
+<BODY>
+<div th:insert="blocks/header :: header"></div>
+<div class="contact-text">
+    <img th:src="@{icons/telegram.png}" alt="" class="ico">
+    <p>@ssskyfall</p>
+    <img th:src="@{icons/mail.png}" alt="" class="ico">
+    <p>ssskfl@gmail.com</p>
+    <img th:src="@{icons/instagram.png}" alt="" class="ico">
+    <p>@skyfall.qq</p>
+</div>
+</BODY>
+<script th:src="@{/scripts/script.js}"></script>
+</HTML>

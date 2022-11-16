@@ -1,0 +1,17 @@
+@font-face {
+    font-family: 'SF UI Display';
+    src: url(../fonts/sfuidisplay_bold.ttf) format(truetype);
+    font-style: normal;
+    font-weight: normal;
+}
+
+
+
+.contact-text{
+    padding-top: 0.5em;
+    margin-left: 12em;
+    display:block;
+    color: white;
+    font-size: 4em;
+    font-family: 'SF UI Display';
+}
