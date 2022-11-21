@@ -14,9 +14,9 @@
 <BODY>
 <div th:insert="blocks/header :: header"></div>
 <div class="print-data" th:each="el : ${weaponList}">
-    <div class="data">
-        <img class="product_img" alt="" th:src="@{'/images/'+${el.getImgPath()}}">
-        <div class="prod_text">
+    <div class="item-data">
+        <img class="item-img" alt="" th:src="@{'/images/'+${el.getImgPath()}}">
+        <div class="item-text">
             <p th:text="${el.getName()}"/>
             <p th:text="${el.getPrice()}"/>
         </div>

@@ -44,11 +44,12 @@ function countCart() {
 function outputCartCount() {
     cnt = countCart()
     var div = document.getElementById('cart-cnt')
-    if (cnt == 0) {
+    if (cnt === 0) {
         div.innerHTML = ""
     }
     div.innerHTML = cnt
 }
+
 
 outputCartCount()
 

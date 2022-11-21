@@ -1,0 +1,42 @@
+@font-face {
+    font-family: 'SF UI Display';
+    src: url(../fonts/sfuidisplay_bold.ttf) format(truetype);
+    font-style: normal;
+    font-weight: normal;
+}
+
+.empty-cart-message {
+    color: white;
+    font-size: 5em;
+    font-family: 'SF UI Display', sans-serif;
+}
+.cart-data{
+    margin-top: 2em;
+    height: auto;
+    width: auto;
+    margin-left: 3em;
+}
+
+.cart-btn-ico {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    margin-left: -10px;
+    margin-top: 5px;
+    padding: 5px 15px;
+}
+.calculated-cart-data{
+    display: inline-flex;
+}
+
+.item-subtotal-text{
+    color: white;
+    font-family: 'SF UI Display', sans-serif;
+    font-size: 17px;
+}
+
+.cart-btn-ico:hover {
+    cursor: pointer;
+}
+
+

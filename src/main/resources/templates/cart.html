@@ -3,16 +3,19 @@
 <HEAD>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <link th:href="@{/styles/style.css}" rel="stylesheet" type="text/css">
+    <link th:href="@{/styles/cart.css}" rel="stylesheet" type="text/css">
     <link type="image/x-icon" th:href="@{/icons/favicon.png}" rel="shortcut icon">
     <link type="Image/x-icon" th:href="@{/icons/favicon.png}" rel="icon">
     <TITLE>
         Корзина
     </TITLE>
-    <script th:src="@{/scripts/jq.js}"></script>
-
 </HEAD>
 <BODY>
 <div th:insert="blocks/header :: header"></div>
+<div id="cart-data" class="cart-data">
+</div>
 </BODY>
+<script th:src="@{/scripts/jq.js}"></script>
 <script th:src="@{/scripts/script.js}"></script>
+<script th:src="@{/scripts/cart.js}"></script>
 </HTML>

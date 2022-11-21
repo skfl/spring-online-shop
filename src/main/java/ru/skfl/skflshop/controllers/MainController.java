@@ -4,8 +4,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import ru.skfl.skflshop.dto.WeaponDTO;
 import ru.skfl.skflshop.entities.Weapon;
+import ru.skfl.skflshop.mappers.WeaponMapper;
 import ru.skfl.skflshop.repositories.WeaponRepository;
+
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Optional;
 
 @Controller
 public class MainController {
@@ -24,6 +32,7 @@ public class MainController {
     public String cart(Model model) {
         return "cart";
     }
+
 
     @GetMapping("/about")
     public String about(Model model) {

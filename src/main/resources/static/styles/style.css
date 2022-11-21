@@ -17,7 +17,7 @@ html {
     height: 80px;
     text-align: center;
     background-color: blueviolet;
-    font-family: 'SF UI Display';
+    font-family: 'SF UI Display', sans-serif;
     color: azure;
 }
 
@@ -81,7 +81,7 @@ html {
     background-color: blueviolet;
     min-width: 160px;
     z-index: 1;
-    font-family: 'SF UI Display';
+    font-family: 'SF UI Display', sans-serif;
 }
 
 .dropdown-content a {
@@ -162,7 +162,7 @@ html {
 
 .text {
     color: white;
-    font-family: 'SF UI Display';
+    font-family: 'SF UI Display', sans-serif;
     font-size: 18px;
 }
 
@@ -174,7 +174,7 @@ html {
     margin-left: 3em;
 }
 
-.data {
+.item-data {
     display: inline-block;
     border: 2px solid;
     border-radius: 10px;
@@ -183,11 +183,11 @@ html {
     text-align: center;
     color: white;
     font-size: 17px;
-    font-family: 'SF UI Display';
+    font-family: 'SF UI Display', sans-serif;
     transition: box-shadow .2s;
 }
 
-.data:hover {
+.item-data:hover {
     box-shadow: 0 0 7px 3px blueviolet;
 }
 
@@ -222,7 +222,7 @@ html {
     height: 35px;
 }
 
-.prod_text {
+.item-text {
     border: 1px solid;
     height: auto;
     width: 200px;
@@ -233,7 +233,7 @@ html {
 }
 
 .cart {
-    font-family: 'SF UI Display';
+    font-family: 'SF UI Display', sans-serif;
     display: inline-block;
     color: white;
     margin-right: 20px;
