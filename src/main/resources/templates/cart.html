@@ -12,10 +12,44 @@
 </HEAD>
 <BODY>
 <div th:insert="blocks/header :: header"></div>
+<div class="cart-title">
+    Корзина
+</div>
 <div id="cart-data" class="cart-data">
+</div>
+<div class="cart-total-price" id="cart-total-price">
+</div>
+<p class="order-form-title" id="order-form-title">Форма заказа </p>
+<div class="order-form" id="order-form">
+    <form method="post" action="#" th:action="@{/order-confirmation}" name="order-data" th:object="${userOrder}" class="order-data">
+        <div class="form-field">
+            <label for="POST-name">Имя </label>
+            <input id="POST-name" required pattern="[a-zA-Z ,.'-]+$" placeholder="Введите имя" type="text" name="name" th:field="*{name}"> <!--/^[a-z ,.'-]+$/i-->
+        </div>
+
+        <div class="form-field">
+            <label for="POST-address">Адрес </label>
+            <input id="POST-address" required placeholder="Введите адрес" type="text" name="address" th:field="*{address}">
+        </div>
+
+        <div class="form-field">
+            <label for="POST-phone">Номер телефона </label>
+            <input id="POST-phone" required pattern="^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$" placeholder="Введите номер телефона" type="text" name="phone" th:field="*{phone}">
+        </div>
+
+        <div class="form-field">
+            <label for="POST-email">E-mail </label>
+            <input id="POST-email" required placeholder="Введите e-mail" type="text" name="e-mail" th:field="*{email}">
+        </div>
+
+        <div class="form-field">
+            <input type="submit" value="Сделать заказ" class="confirmation-button" role="button">
+        </div>
+    </form>
 </div>
 </BODY>
 <script th:src="@{/scripts/jq.js}"></script>
 <script th:src="@{/scripts/script.js}"></script>
 <script th:src="@{/scripts/cart.js}"></script>
+<script th:src="@{/scripts/orderFormValidation.js}"></script>
 </HTML>

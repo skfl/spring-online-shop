@@ -10,7 +10,23 @@
     font-size: 5em;
     font-family: 'SF UI Display', sans-serif;
 }
-.cart-data{
+
+.cart-title {
+    color: white;
+    font-size: 3em;
+    font-family: 'SF UI Display', sans-serif;
+    margin-left: 1em;
+    margin-top: 1em;
+}
+
+.cart-total-price {
+    color: white;
+    font-size: 3em;
+    font-family: 'SF UI Display', sans-serif;
+    margin-left: 1em;
+}
+
+.cart-data {
     margin-top: 2em;
     height: auto;
     width: auto;
@@ -25,11 +41,12 @@
     margin-top: 5px;
     padding: 5px 15px;
 }
-.calculated-cart-data{
+
+.calculated-cart-data {
     display: inline-flex;
 }
 
-.item-subtotal-text{
+.item-subtotal-text {
     color: white;
     font-family: 'SF UI Display', sans-serif;
     font-size: 17px;
@@ -38,5 +55,92 @@
 .cart-btn-ico:hover {
     cursor: pointer;
 }
+
+/* ORDER FORM STYLE */
+.order-form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 20px;
+    width: 400px;
+    height: 400px;
+    font-family: 'SF UI Display', sans-serif;
+    color: white;
+}
+
+.order-data {
+    display: block;
+    white-space: normal;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.confirmation-button {
+    background-color: blueviolet;
+    justify-content: center;
+    border-radius: 8px;
+    border-style: none;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "SF UI Display", Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    height: 40px;
+    line-height: 20px;
+    list-style: none;
+    margin: 0;
+    outline: none;
+    font-size: 20px;
+    padding: 10px 16px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    transition: color 100ms;
+    vertical-align: baseline;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.confirmation-button:hover,
+.confirmation-button:focus {
+    background-color: #641975;
+}
+
+.order-form-title {
+    color: white;
+    font-family: 'SF UI Display', sans-serif;
+    font-size: 2em;
+}
+
+.form-field{
+    margin-bottom: 5px;
+    width: 250px;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid blueviolet;
+    border-radius: 4px;
+}
+
+input[type=text]:focus {
+    border: 3px solid #641975;
+}
+
+input:invalid {
+    box-shadow: 0 0 5px 1px red;
+}
+
+input:focus:invalid {
+    box-shadow: none;
+}
+
+
 
 
