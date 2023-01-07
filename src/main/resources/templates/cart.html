@@ -2,6 +2,8 @@
 <HTML id="html" xmlns:th="http://www.thymeleaf.org">
 <HEAD>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta id="_csrf" name="_csrf" th:content="${_csrf.token}"/>
+    <meta id="_csrf_header" name="_csrf_header" th:content="${_csrf.headerName}"/>
     <link th:href="@{/styles/style.css}" rel="stylesheet" type="text/css">
     <link th:href="@{/styles/cart.css}" rel="stylesheet" type="text/css">
     <link type="image/x-icon" th:href="@{/icons/favicon.png}" rel="shortcut icon">
@@ -11,6 +13,7 @@
     </TITLE>
 </HEAD>
 <BODY>
+
 <div th:insert="blocks/header :: header"></div>
 <div class="cart-title">
     Корзина
@@ -21,20 +24,24 @@
 </div>
 <p class="order-form-title" id="order-form-title">Форма заказа </p>
 <div class="order-form" id="order-form">
-    <form method="post" action="#" th:action="@{/order-confirmation}" name="order-data" th:object="${userOrder}" class="order-data">
+    <form method="post" action="#" th:action="@{/order-confirmation}" name="order-data" th:object="${userOrder}"
+          class="order-data">
         <div class="form-field">
             <label for="POST-name">Имя </label>
-            <input id="POST-name" required pattern="[a-zA-Z ,.'-]+$" placeholder="Введите имя" type="text" name="name" th:field="*{name}"> <!--/^[a-z ,.'-]+$/i-->
+            <input id="POST-name" required pattern="[a-zA-Z ,.'-]+$" placeholder="Введите имя" type="text" name="name"
+                   th:field="*{name}">
         </div>
 
         <div class="form-field">
             <label for="POST-address">Адрес </label>
-            <input id="POST-address" required placeholder="Введите адрес" type="text" name="address" th:field="*{address}">
+            <input id="POST-address" required placeholder="Введите адрес" type="text" name="address"
+                   th:field="*{address}">
         </div>
 
         <div class="form-field">
             <label for="POST-phone">Номер телефона </label>
-            <input id="POST-phone" required pattern="^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$" placeholder="Введите номер телефона" type="text" name="phone" th:field="*{phone}">
+            <input id="POST-phone" required pattern="^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$"
+                   placeholder="Введите номер телефона" type="text" name="phone" th:field="*{phone}">
         </div>
 
         <div class="form-field">
@@ -51,5 +58,4 @@
 <script th:src="@{/scripts/jq.js}"></script>
 <script th:src="@{/scripts/script.js}"></script>
 <script th:src="@{/scripts/cart.js}"></script>
-<script th:src="@{/scripts/orderFormValidation.js}"></script>
 </HTML>

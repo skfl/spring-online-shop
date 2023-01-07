@@ -1,7 +1,6 @@
 package ru.skfl.skflshop.mappers;
 
 import org.mapstruct.Mapper;
-import org.mapstruct.Mapping;
 import org.mapstruct.factory.Mappers;
 import ru.skfl.skflshop.dto.WeaponDTO;
 import ru.skfl.skflshop.entities.Weapon;
@@ -10,7 +9,7 @@ import ru.skfl.skflshop.entities.Weapon;
 public interface WeaponMapper {
     WeaponMapper INSTANCE = Mappers.getMapper(WeaponMapper.class);
 
-    WeaponDTO weaponToWeaponDTO(Weapon weapon);
+    WeaponDTO toDTO(Weapon weapon);
 
-    Weapon weaponDTOtoWeapon(WeaponDTO weaponDTO);
+    Weapon toEntity(WeaponDTO weaponDTO);
 }

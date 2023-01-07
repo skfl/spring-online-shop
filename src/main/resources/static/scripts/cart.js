@@ -10,7 +10,7 @@ function printEmptyCartText() {
     elem.parentNode.removeChild(elem);
 }
 
-function hideOrderForm(){
+function hideOrderForm() {
     let form = document.getElementById("order-form");
     let title = document.getElementById("order-form-title")
     form.style.display = "none";
@@ -88,11 +88,17 @@ function calculateTotal() {
     document.getElementById('cart-total-price').innerHTML = out
 }
 
+
+var token = $('#_csrf').attr('content');
+var header = $('#_csrf_header').attr('content');
+console.log(token + " " + header)
+
 async function getItemData() {
     let cartUrl = '/cart'
     let response = fetch(cartUrl, {
         method: 'POST', headers: {
-            'Content-Type': 'application/json;charset=utf-8'
+            'Content-Type': 'application/json;charset=utf-8',
+            'X-CSRF-TOKEN': document.getElementById('_csrf').content
         }, body: JSON.stringify(storage)
     })
 

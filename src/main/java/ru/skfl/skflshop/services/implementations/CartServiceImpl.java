@@ -1,6 +1,5 @@
 package ru.skfl.skflshop.services.implementations;
 
-import ch.qos.logback.core.read.ListAppender;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import ru.skfl.skflshop.dto.WeaponDTO;
@@ -23,7 +22,7 @@ public class CartServiceImpl implements CartService {
 
         for (Long itemID : cartData.keySet()) {
             Optional<Weapon> weapon = weaponRepository.findById(itemID);
-            weapon.ifPresent(value -> weaponList.add(WeaponMapper.INSTANCE.weaponToWeaponDTO(value)));
+            weapon.ifPresent(value -> weaponList.add(WeaponMapper.INSTANCE.toDTO(value)));
         }
 
         return weaponList;

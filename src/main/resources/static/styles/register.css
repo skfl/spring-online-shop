@@ -1,0 +1,77 @@
+@font-face {
+    font-family: 'SF UI Display';
+    src: url(../fonts/sfuidisplay_bold.ttf) format(truetype);
+    font-style: normal;
+    font-weight: normal;
+}
+
+.register-form-wrap {
+    font-family: 'SF UI Display', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+    background: blueviolet;
+}
+
+input {
+    width: 100%;
+    color: black;
+    padding: 8px 15px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid blueviolet;
+    border-radius: 4px;
+}
+
+input:focus {
+    border: 4px solid #641975;
+}
+
+.btn {
+    padding: 8px 20px;
+    border-radius: 0;
+    overflow: hidden;
+    width: 100%;
+    margin: 18px 0 9px 0;
+    transition: color .3s;
+}
+
+.btn:hover {
+    color: white;
+}
+
+.form-input-material {
+    --input-default-border-color: blueviolet;
+    --input-border-bottom-color: blueviolet;
+}
+
+.register-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 40px;
+    color: white;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 0.4px 0.4px rgba(128, 128, 128, 0.109),
+    0 1px 1px rgba(128, 128, 128, 0.155),
+    0 2.1px 2.1px rgba(128, 128, 128, 0.195),
+    0 4.4px 4.4px rgba(128, 128, 128, 0.241),
+    0 12px 12px rgba(128, 128, 128, 0.35);
+}
+
+h1 {
+    margin: 0 0 8px 0;
+}
+
+.form-input-material {
+    margin: 12px 0;
+}
+
+.error-message{
+    font-size: 10px;
+    color: red;
+}
+
+

@@ -26,6 +26,7 @@ public class CartController {
     @PostMapping("/cart")
     @ResponseBody
     public List<WeaponDTO> getCartData(@RequestBody HashMap<Long, Integer> cartLocalStorage) {
+        System.err.println("ZALUPA");
         return cartService.getListOfCart(cartLocalStorage);
     }
 
