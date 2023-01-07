@@ -1,5 +1,6 @@
-package ru.skfl.skflshop.dto;
+package ru.skfl.skflshop.security.details;
 
+import lombok.ToString;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -10,7 +11,6 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
-
 public class ShopUserPrincipal implements UserDetails {
     private User user;
 
@@ -35,7 +35,7 @@ public class ShopUserPrincipal implements UserDetails {
 
     @Override
     public String getUsername() {
-        return user.getUsername();
+        return user.getEmail();
     }
 
     @Override

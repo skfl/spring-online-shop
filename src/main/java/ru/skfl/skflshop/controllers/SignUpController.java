@@ -41,8 +41,7 @@ public class SignUpController {
             model.addAttribute("message", "error");
             return "signUp";
         }
-        model.addAttribute("message", "success");
-        return "signUp";
+        return "redirect:/signIn";
     }
 
 }

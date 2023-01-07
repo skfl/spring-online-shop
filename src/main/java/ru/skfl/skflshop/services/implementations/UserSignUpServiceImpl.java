@@ -23,7 +23,7 @@ public class UserSignUpServiceImpl implements UserSignUpService {
 
     public Optional<User> signUp(User user) {
 
-        if (userRepository.findByUsername(user.getUsername()).isPresent()) {
+        if (userRepository.findByEmail(user.getUsername()).isPresent()) {
             System.err.println("Username already used");             //todo
             return Optional.empty();
         }

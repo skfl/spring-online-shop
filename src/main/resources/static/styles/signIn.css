@@ -5,6 +5,11 @@
     font-weight: normal;
 }
 
+.error-message{
+    font-size: 10px;
+    color: red;
+}
+
 .go-to-register-link {
     font-size: 11px;
     color: blueviolet;
