@@ -69,6 +69,12 @@
     color: white;
 }
 
+.error-message {
+    font-size: 16px;
+    color: red;
+    font-family: "SF UI Display", Helvetica, Arial, sans-serif;
+}
+
 .order-data {
     display: block;
     white-space: normal;
@@ -115,7 +121,7 @@
     font-size: 2em;
 }
 
-.form-field{
+.form-field {
     margin-bottom: 5px;
     width: 250px;
 }

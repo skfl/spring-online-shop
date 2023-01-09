@@ -11,7 +11,6 @@ import java.util.Set;
 @Getter
 @Setter
 @Builder
-@ToString
 @Table(name = "usr")
 public class User {
     @Id
@@ -34,6 +33,11 @@ public class User {
     @CollectionTable(name = "user_state", joinColumns = @JoinColumn(name = "user_id"))
     @Enumerated(value = EnumType.STRING)
     private Set<UserState> states;
+
+    @OneToMany(mappedBy = "user")
+    private Set<UserOrder> orders;
+
+    private String token; //todo: implement many tokens feature (i should create new entity and bind with user)
 
 //    public List<SimpleGrantedAuthority> getAuthorities() {
 //

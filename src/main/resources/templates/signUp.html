@@ -17,8 +17,9 @@
 <div class="register-form-wrap">
     <form class="register-form" action="#" th:action="@{/signUp}" method="post" th:object="${userDTO}"
           name="signUpData">
+<!--        <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}">-->
         <h1>Регистрация</h1>
-        <h1 class = 'error-message' th:text="${message.equals('error') ? 'Что-то не так' : ''}"></h1>
+        <h1 class='error-message' th:text="${message.equals('error') ? 'Пользователь с таким именем существует' : ''}"></h1>
         <div class="form-input-material">
             <label for="username">Логин</label>
             <input type="text" name="username" id="username" placeholder=" " autocomplete="off"
@@ -34,7 +35,7 @@
 
         <div class="form-input-material">
             <label for="password">Пароль</label>
-            <input type="password" name="password" id="password" placeholder=" " autocomplete="off"
+            <input type="password" name="passwordHash" id="password" placeholder=" " autocomplete="off"
                    th:field="*{passwordHash}" class="form-control-material" required/>
         </div>
         <button type="submit" class="btn btn-primary btn-ghost" onclick="signUp()">Зарегистрироваться</button>

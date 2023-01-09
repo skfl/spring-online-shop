@@ -7,9 +7,10 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class OrderDTO {
+public class UserOrderDTO {
+    private Long id;
     private String name;
     private String address;
     private String email;
-    private String phone;
+    private String items;
 }

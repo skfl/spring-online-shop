@@ -22,8 +22,7 @@ public class UserSignUpServiceImpl implements UserSignUpService {
     private PasswordEncoder passwordEncoder;
 
     public Optional<User> signUp(User user) {
-
-        if (userRepository.findByEmail(user.getUsername()).isPresent()) {
+        if (userRepository.findByEmail(user.getEmail()).isPresent()) {
             System.err.println("Username already used");             //todo
             return Optional.empty();
         }

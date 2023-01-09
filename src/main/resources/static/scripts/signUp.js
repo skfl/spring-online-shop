@@ -1,4 +1,3 @@
-console.log("xui")
 
 function signUp(){
     let form = document.forms.signUpData

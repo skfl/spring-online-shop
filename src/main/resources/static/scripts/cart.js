@@ -1,9 +1,16 @@
+if (document.getElementById('error-message').innerHTML.length > 3) {
+    document.getElementById('order-form').style.visibility = 'hidden';
+}
+
+function putOrderToForm() {
+    document.getElementById('items').setAttribute("value", JSON.stringify(storage))
+}
+
 let globalData = {}
 globalData = getItemData()
 
 function printEmptyCartText() {
     let out = ""
-    console.log("zalupa happened")
     out += '<p class="empty-cart-message">' + 'Корзина пуста' + '</p>'
     document.getElementById('cart-data').innerHTML = out
     let elem = document.getElementById("cart-total-price");
@@ -74,7 +81,6 @@ function calculateSubtotal(id, count) {
 
 function calculateTotal() {
     let total = 0
-    console.log(globalData.length)
     for (let i = 0; i < globalData.length; i++) {
         total += globalData[i].price * storage.getItem(globalData[i].id)
     }
@@ -88,24 +94,19 @@ function calculateTotal() {
     document.getElementById('cart-total-price').innerHTML = out
 }
 
-
-var token = $('#_csrf').attr('content');
-var header = $('#_csrf_header').attr('content');
-console.log(token + " " + header)
-
 async function getItemData() {
     let cartUrl = '/cart'
     let response = fetch(cartUrl, {
         method: 'POST', headers: {
             'Content-Type': 'application/json;charset=utf-8',
-            'X-CSRF-TOKEN': document.getElementById('_csrf').content
+            // 'X-CSRF-TOKEN': document.getElementById('_csrf').content
         }, body: JSON.stringify(storage)
     })
 
     return (await response).json()
 }
 
-let cartDataPromise = getItemData(storage).then(
+getItemData(storage).then(
     (data) => {
         globalData = data
         let out = "";
@@ -128,7 +129,9 @@ let cartDataPromise = getItemData(storage).then(
             out += '<div class="item-subtotal">'
             out += '<p class="item-subtotal-text" id="item-subtotal-' + item.id + '">' + '</p>'
             out += "</div>"
+
             out += '</div>'
+
             out += '<div class = "item-tools">'
             out += '<img class = "cart-btn-ico" alt = "" src="icons/plus.png" onclick="plusToCart(' + item.id + ')">'
             out += '<img class = "cart-btn-ico" alt = "" src="icons/minus.png" onclick="minusFromCart(' + item.id + ')">'
@@ -145,4 +148,3 @@ let cartDataPromise = getItemData(storage).then(
         calculateTotal()
     }
 )
-

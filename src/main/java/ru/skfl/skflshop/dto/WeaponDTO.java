@@ -10,6 +10,8 @@ import lombok.Setter;
 @Setter
 @Getter
 public class WeaponDTO {
+
+    private Long id;
     private String type;
     private String name;
     private int price;

@@ -10,23 +10,23 @@
         Авторизация
     </TITLE>
     <script th:src="@{/scripts/jq.js}"></script>
-
 </HEAD>
 <body>
 <div th:insert="blocks/header :: header"></div>
 <div class="login-form-wrap">
-    <form class="login-form" action="/signIn" method="post">
+    <form class="login-form" action="/signIn/do" method="post" th:object="${signInForm}">
         <h1>Авторизация</h1>
         <h1 class="error-message" id="error-message" style="visibility: hidden">Неправильные email / пароль</h1>
+        <!--<input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}">-->
         <div class="form-input-material">
-            <label for="username">Email</label>
-            <input type="text" name="email" id="username" placeholder=" " autocomplete="off"
-                   class="form-control-material" required/>
+            <label for="email">Email</label>
+            <input type="text" name="email" id="email" placeholder=" " autocomplete="off"
+                   class="form-control-material" required th:value="*{email}"/>
         </div>
         <div class="form-input-material">
             <label for="password">Пароль</label>
             <input type="password" name="password" id="password" placeholder=" " autocomplete="off"
-                   class="form-control-material" required/>
+                   class="form-control-material" required th:value="*{password}"/>
         </div>
         <button type="submit" class="btn btn-primary btn-ghost">Войти</button>
         <a href="/signUp" class="go-to-register-link">нет аккаунта?зарегистрируйтесь...</a>

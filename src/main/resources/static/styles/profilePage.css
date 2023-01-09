@@ -13,3 +13,78 @@
     font-size: 2.5em;
     font-family: 'SF UI Display', serif;
 }
+
+.profile-name {
+    font-size: 23px;
+    margin-left: 2.3em;
+    color: white;
+    font-family: "SF UI Display", Helvetica, Arial, sans-serif;
+}
+
+.logout-button {
+    background-color: blueviolet;
+    justify-content: center;
+    border-radius: 8px;
+    border-style: none;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "SF UI Display", Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    height: 40px;
+    line-height: 20px;
+    list-style: none;
+    margin-left: 1.7em;
+    outline: none;
+    font-size: 20px;
+    padding: 10px 16px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    transition: color 100ms;
+    vertical-align: baseline;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.logout-button:hover,
+.logout-button:focus {
+    background-color: #641975;
+}
+
+.empty-order-message {
+    color: white;
+    font-size: 2.5em;
+    margin-left: 1.7em;
+    font-family: 'SF UI Display', sans-serif;
+}
+
+.order-title {
+    padding-top: 0.5em;
+    margin-left: 1em;
+    display: block;
+    color: white;
+    font-size: 2em;
+    font-family: 'SF UI Display', serif;
+}
+
+.order-item-img {
+    width: 200px;
+    height: 150px;
+}
+
+
+.order-item {
+    display: inline-block;
+    border: 2px solid;
+    border-radius: 10px;
+    border-color: blueviolet;
+    margin: 10px 10px 10px 10px;
+    text-align: center;
+    color: white;
+    font-size: 17px;
+    font-family: 'SF UI Display', sans-serif;
+    transition: box-shadow .2s;
+}

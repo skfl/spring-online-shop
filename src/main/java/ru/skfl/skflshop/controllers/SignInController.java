@@ -21,10 +21,4 @@ public class SignInController {
         model.addAttribute("message", "");
         return "signIn";
     }
-
-//    @PostMapping("/signIn")
-//    public String authUser(@ModelAttribute SignInForm signInForm, Model model) {
-//
-//        return "redirect:/profile";
-//    }
 }
